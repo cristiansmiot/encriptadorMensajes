@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encriptador de Mensajes</title>
+
+    <!-- Precargar CSS crítico -->
+    <link rel="preload" href="styles/style.css" as="style">    
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Optimización de preconexiones y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
+
+    <!-- Carga asíncrona de scripts-->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="./imagenes/svg/Logo.svg" alt="Logo Alura" width="120" height="48">
+    </header>
+    <main>
+        <form class="form__section">
+            <textarea
+              class="form__input"
+              name="mensaje"
+              id="miTextarea"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese el texto aquí"
+              aria-label="Área de texto para ingresar mensaje"
+            ></textarea>
+            <div class="btn__container">
+              <div class="alert__msj">
+                <img src="imagenes/svg/alert.svg" alt="Advertencia" width="16" height="16"><span
+                  >Solo letras minúsculas y sin acento</span
+                >
+              </div>
+            </div>
+            <div class="submit__container">
+              <button
+                class="form__btn"
+                type="button"                
+                id="encriptarBtn"
+              >Encriptar</button>
+              <button
+                class="form__btn--secondary"
+                type="button"
+                id="desencriptarBtn"
+              >Desencriptar</button>              
+            </div>
+          </form>
+          <aside class="result">
+            <img
+              src="imagenes/img/Muñeco.png"
+              alt="Imagen de monito"
+              class="result__img"
+              width="336"
+              height="304"
+              loading="lazy"
+            />
+            <div id="carga" class="loader hidden" aria-live="polite"></div>
+            <div class="result__container">
+              <h3 class="result__title">Ningún mensaje fue encontrado</h3>
+              <p id="result__text" class="result__text">
+                Ingresa el texto que deseas encriptar o desencriptar.
+              </p>
+              <button id="copiarBtn" class="form__btn--secondary hidden">
+                Copiar
+              </button>
+            </div>
+          </aside>            
+    </main>    
+</body>
+</html>

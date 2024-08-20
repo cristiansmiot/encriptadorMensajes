@@ -1,0 +1,209 @@
+:root {
+    --dark-blue: #0a3871;
+    --main-color: #f3f5fc;
+    --light-blue: #d8dfe8;
+    --inter-font: "Inter", sans-serif;
+    --btn-padding: 1rem 2rem;
+    --btn-width: 328px;
+    --btn-height: 67px;
+    --border-radius: 24px;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 3.2rem;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: var(--main-color);
+    font-family: var(--inter-font);
+  }
+  header {
+    margin-bottom: 5rem;
+    width: 60%;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header img {
+    width: 250px;
+    height: 120px;
+  }
+  
+  .form__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+  }
+  .form__input {
+    width: 100%;
+    max-width: 577px;
+    border: none;
+    height: 64dvh;
+    outline: none;
+    background: transparent;
+    font-size: var(--font-size-large);
+    color: var(--dark-blue);
+    margin-bottom: 3rem;
+    overflow: auto;
+  }
+  
+  .form__input::placeholder {
+    color: var(--dark-blue);
+  }
+
+  .alert__msj {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: var(--font-size-small);
+    margin-bottom: 1.5rem;
+  }
+
+  .submit__container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .form__btn, 
+  .form__btn--secondary {
+    font-size: var(--font-size-medium);
+    padding: var(--btn-padding);
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border-radius: var(--border-radius);
+}
+  .form__btn {
+    background: var(--dark-blue);
+    color: white;
+    border: 1px solid var(--dark-blue);
+}
+
+  .form__btn--secondary {
+    background: transparent;
+    color: var(--dark-blue);
+    border: 1px solid transparent;
+}
+
+#copiarBtn {
+  background-color: var(--dark-blue); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  font-size: var(--font-size-medium); /* Tamaño de la fuente */
+  padding: var(--btn-padding); /* Espaciado interno */
+  width: var(--btn-width); /* Ancho del botón */
+  height: var(--btn-height); /* Altura del botón */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  border: 1px solid var(--dark-blue); /* Color del borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+#copiarBtn:hover {
+  background-color: var(--light-blue); /* Color de fondo en hover */
+  color: var(--dark-blue); /* Color del texto en hover */
+  border-color: var(--light-blue); /* Color del borde en hover */
+}
+
+/* Efecto al hacer clic en el botón */
+#copiarBtn:active {
+  background-color: var(--dark-blue); /* Color de fondo al hacer clic */
+  color: #fff; /* Color del texto al hacer clic */
+  border-color: var(--dark-blue); /* Color del borde al hacer clic */
+}
+
+
+  .result {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 72dvh;
+    border-radius: 32px;
+    max-width: 40rem;
+    width: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .loader {
+    width: 100px;
+    height: 45px;
+    position: relative;
+  } 
+  .loader::before,
+  .loader::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(
+      -50px -20px,
+      10% -12px,
+      20% 0,
+      calc(50% - 15px) 0,
+      calc(50% - 10px) -20px,
+      calc(50% - 8px) -15px,
+      calc(50% + 8px) -15px,
+      calc(50% + 10px) -20px,
+      calc(50% + 15px) 0,
+      80% 0,
+      90% -12px,
+      calc(100% + 50px) -20px,
+      100% 80%,
+      calc(100% + 10px) calc(100% + 10px),
+      60% 100%,
+      50% calc(100% + 15px),
+      40% 100%,
+      -10px calc(100% + 10px),
+      0 80%
+    );
+  }
+
+  .loader:after {
+    animation: l9 1s infinite;
+    transform: perspective(300px) translateZ(0px);
+  }
+
+  keyframes l9 {
+    to {
+      transform: perspective(300px) translateZ(100px);
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .submit__container {
+      justify-content: center;
+    }
+    .result {
+      height: auto;
+      max-width: 624px;
+      margin-top: 2rem;
+      min-height: 186px;
+    }
+    .result__img {
+      display: none;
+    }
+    header img {
+      width: 73px;
+    }
+  }
+  
+  
+  
+  

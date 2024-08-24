@@ -22,6 +22,8 @@ El **Encriptador de Texto** es una aplicación web sencilla que te permite encri
 ## Tecnologias Utilizadas
 <img height="36" src="https://cdn-icons-png.flaticon.com/512/136/136530.png"><img height="36" src="https://cdn-icons-png.flaticon.com/512/136/136528.png"><img height="36" src="https://cdn-icons-png.flaticon.com/512/136/136527.png">
 
+##Link para Probar
+https://cristiansmiot.github.io/encriptadorMensajes/
 
 ## Créditos
 
